@@ -1,0 +1,166 @@
+/*To jest komentarz w css*/
+
+html body {/*selector który wybiera "body" do stylowania*/
+    margin: 0 ;/*wszystkie marginesy mają wartość 0*/
+    font-family: 'Calibri'; /*ustalenie fontu dla całej strony*/
+}
+
+a { /*globalny wygląd linków*/
+    color: #4c4c4c; /*kolor tekstu*/
+    font-weight: 600; /*gruboś tekstu*/
+    text-decoration: none; /*wyłączenie domyślnego podkreślenia*/
+}
+
+body > .main {   /*zmiana wszystkich elementów z classą main, które tylko i wyłącznie wewnątrz "body"*/
+    display: flex; /*mają się wyśietlać według reguł dla flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    flex-direction: column; /*elementy wenątrz nich mają się układać jak w kolumnie*/
+}
+
+.header.main {
+    margin: 0 0 15px 0; /*tylko margines dolny*/
+    /*poniższy zapis modyfikuje marginesy tak samo*/
+    margin-top: 0; 
+    margin-right: 0;
+    margin-bottom: 15px;
+    margin-left: 0;
+    padding: 10px 30px 15px 30px; /*ustawienie margiensów wewnętrznych*/
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    border-bottom: rgba(26, 159, 237, 0.8) 1px solid; /*ustawienie koloru, grubości oraz stylu dolnej ramki*/
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: rgba(225, 225,225, 0.7);
+}
+
+.wraper { /*zmiana wszystkich elementów z calssą wraper*/
+    display: flex;
+    flex-direction: row;  /*elementy wewnątrz układają się jaw rzędzie*/
+}
+
+.header.main .wraper { /*zmiana elemetu z classą wraper tylko wewnątrz ekenebtu o classach header i main*/
+    justify-content: space-between; /*poziome wyrównanie elementów wewnątrz w poziomie by miały równy odstęp*/
+    align-items: center; /*pionowe wyrównanie elemenetów tsk by były wyśrodkowane*/
+}
+
+.header.main .logo { /*zmiany tylko dla elemetu z ckassą logo wewnątrz headera*/
+    display: inline-block;/* wyświetl jako blok ułożony w lini*/
+    margin: 0;
+}
+
+.header.main .logo a img {
+    height: 60px;
+}
+
+.header.main .menu {
+    display: inline-block;  
+}
+
+.header.main .menu a {
+    font-size: 18px;
+    margin: 0 0 0 10px;
+    letter-spacing: 1pt;
+}
+
+.wraper.content .welcome{
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.wraper.content .welcome img {
+    width: 100vw;
+}
+
+.wraper.content .welcome .slogan {
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    color:rgb(202, 11, 11);
+    font-size: 60px;
+    font-family: 'Dancing Script';
+}
+
+.wraper.content .welcome p {
+    margin: 0 30px 0 30px;
+    
+    letter-spacing: 1.5pt;
+    font-family: 'Calibri';
+    font-size: 18px; 
+}
+
+.footer.main {
+    padding: 20px 15px 0 15px;
+    padding-top: 20 px; 
+    padding-right: 15px;
+    padding-bottom: 0;
+    padding-left: 15px;
+    font-family: 'Calibri';
+    font-size: 17px;
+    font-style: italic;
+    color:rgba(7, 7, 7, 0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#contact .footer.main {
+   padding: 150px 0 0 15px;
+   padding-top: 150px; 
+   padding-right: 0;
+   padding-bottom: 0;
+   padding-left: 15px;
+}
+.footer.main p a{
+    color: blue;
+}
+
+#contact .main.content .wraper h2 {
+    margin: 20px 0 40px 15px;
+    font-family: 'Calibri';
+    font-size: 20px; 
+
+}
+
+#contact .main.content .wraper h3 {
+    margin: 0 0 0 15px;
+    font-family: 'Calibri';
+    font-size: 20px; 
+
+}
+
+#contact .main.content .wraper h3 a {
+    color:blue
+}
+
+#o_mnie .main.content .wraper .my.bio {
+    margin: 0 0 50px 15px;  
+    padding: 20px 0 50px 0; 
+}
+
+#o_mnie .main.content .wraper h3 {
+    font-family: 'Dancing Script';
+    font-size: 48px; 
+    font-weight: 900;
+    color:rgba(202, 11, 11, 0.5);
+    font-style: italic;
+
+}
+
+#o_mnie .main.content .wraper .text-box {
+    display: inline-block;
+}
+
+#o_mnie .main.content .wraper .text-box p {
+    display: inline-block;
+    font-size: 22px;
+    text-align: justify;
+    width: 70vw;
+}
+
+#o_mnie .main.content .wraper .text-box img {
+    display: inline-block;
+    width: 25vw;
+}
